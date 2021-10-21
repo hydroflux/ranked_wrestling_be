@@ -6,9 +6,10 @@ class CreateWrestlers < ActiveRecord::Migration[6.1]
       t.string :league
       t.string :division
       t.string :level
-      t.string :weight
-      t.string :win
-      t.string :loss
+      t.integer :weight
+      t.integer :win
+      t.integer :loss
+      t.integer :tie
 
       t.timestamps
     end
