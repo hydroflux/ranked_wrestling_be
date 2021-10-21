@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  team: MyString
+  league: MyString
+  division: MyString
+  level: MyString
+  weight: MyString
+  win: MyString
+  loss: MyString
+
+two:
+  name: MyString
+  team: MyString
+  league: MyString
+  division: MyString
+  level: MyString
+  weight: MyString
+  win: MyString
+  loss: MyString
