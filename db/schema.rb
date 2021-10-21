@@ -10,19 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_21_215913) do
-
-  create_table "wrestlers", force: :cascade do |t|
-    t.string "name"
-    t.string "team"
-    t.string "league"
-    t.string "division"
-    t.string "level"
-    t.integer "weight"
-    t.integer "win"
-    t.integer "loss"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+ActiveRecord::Schema.define(version: 20_211_021_215_913) do
+  create_table 'wrestlers', force: :cascade do |t|
+    t.string 'name'
+    t.string 'team'
+    t.string 'league'
+    t.string 'division'
+    t.string 'level'
+    t.integer 'weight'
+    t.integer 'win'
+    t.integer 'loss'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
-
 end
