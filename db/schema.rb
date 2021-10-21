@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_21_213242) do
+ActiveRecord::Schema.define(version: 2021_10_21_215913) do
 
   create_table "wrestlers", force: :cascade do |t|
     t.string "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2021_10_21_213242) do
     t.integer "weight"
     t.integer "win"
     t.integer "loss"
-    t.integer "tie"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
