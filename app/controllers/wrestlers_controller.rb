@@ -37,4 +37,14 @@ class WrestlersController < ApplicationController
       :loss
     )
   end
+
+  def destroy
+    @wrestler = Wrestler.find(params[:id])
+    if @wrestler
+      @wrestler.destroy
+      render json: "Deleted #{@wrestler.name}"
+    else
+      render json: "Unable to locate specified wrestler with an id of '#{params[:id]}', please review."
+    end
+  end
 end
