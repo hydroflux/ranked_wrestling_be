@@ -12,5 +12,6 @@ class Wrestler < ApplicationRecord
 
   # has_many :matches
   # has_many :events, through: :matches
-  # belongs_to: :team
+  belongs_to :team
+  belongs_to :league, through: :team
 end
