@@ -5,4 +5,5 @@ class League < ApplicationRecord
   validates :division_abbreviation, presence: true
 
   has_many :teams
+  has_many :wrestlers, through: :team
 end
