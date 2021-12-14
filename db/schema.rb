@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_14_231915) do
+ActiveRecord::Schema.define(version: 2021_12_14_232539) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_231915) do
     t.integer "wrestler_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "weight"
     t.index ["wrestler_id"], name: "index_matches_on_wrestler_id"
   end
 
