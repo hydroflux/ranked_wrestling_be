@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_14_232539) do
+ActiveRecord::Schema.define(version: 2021_12_14_232809) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 2021_12_14_232539) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "weight"
+    t.integer "event_id", null: false
+    t.index ["event_id"], name: "index_matches_on_event_id"
     t.index ["wrestler_id"], name: "index_matches_on_wrestler_id"
   end
 
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_232539) do
   end
 
   add_foreign_key "events", "leagues"
+  add_foreign_key "matches", "events"
   add_foreign_key "matches", "wrestlers"
   add_foreign_key "teams", "leagues"
   add_foreign_key "wrestlers", "teams"
