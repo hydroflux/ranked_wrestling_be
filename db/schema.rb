@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_14_230857) do
+ActiveRecord::Schema.define(version: 2021_12_14_231915) do
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "level"
+    t.integer "number_matches"
+    t.date "date"
+    t.datetime "datetime"
+    t.boolean "is_tournament"
+    t.integer "league_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["league_id"], name: "index_events_on_league_id"
+  end
 
   create_table "leagues", force: :cascade do |t|
     t.string "name"
@@ -56,6 +69,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_230857) do
     t.index ["team_id"], name: "index_wrestlers_on_team_id"
   end
 
+  add_foreign_key "events", "leagues"
   add_foreign_key "matches", "wrestlers"
   add_foreign_key "teams", "leagues"
   add_foreign_key "wrestlers", "teams"
